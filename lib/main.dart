@@ -1,26 +1,22 @@
+import 'package:event_booking_app/core/styles/themes.dart';
+import 'package:event_booking_app/features/spalsh/spalsh_screen.dart';
 import 'package:flutter/material.dart';
 
+
+
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: AppThemes.lightTheme,
+      home: const SplashScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
