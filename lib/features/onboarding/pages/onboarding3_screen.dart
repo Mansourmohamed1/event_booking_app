@@ -1,11 +1,10 @@
-import 'package:event_booking_app/features/onboarding/pages/onboarding2_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/app_images.dart';
 import '../../../core/functions/naviagtions.dart';
+import '../../auth/signin_screen.dart'; 
 import '../widgets/bottomContainer.dart';
 import '../widgets/imageContainer.dart';
-import 'onboarding1_screen.dart';
 
 class Onboarding3Screen extends StatelessWidget {
   const Onboarding3Screen({super.key});
@@ -29,10 +28,12 @@ class Onboarding3Screen extends StatelessWidget {
                   " In publishing and graphic design, Lorem is a placeholder text commonly ",
               currentIndex: 2,
               onNextPressed: () {
-                pushTo(context, Onboarding1Screen());
+               
+                pushReplacement(context, const SigninScreen());
               },
               onSkipPressed: () {
-                pushTo(context, Onboarding2Screen());
+               
+                pushReplacement(context, const SigninScreen());
               },
             ),
           ),
