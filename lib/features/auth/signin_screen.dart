@@ -1,6 +1,8 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
+import 'package:event_booking_app/core/functions/naviagtions.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
+import 'package:event_booking_app/core/widgets/custom_bottom_nav_bar.dart';
 import 'package:event_booking_app/features/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -148,7 +150,9 @@ class SigninScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                        pushReplacement(context, const MainAppScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -258,12 +262,7 @@ class SigninScreen extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignupScreen(),
-                        ),
-                      );
+                      pushTo(context, const SignupScreen());
                     },
                     child: Text(
                       'Sign up',
