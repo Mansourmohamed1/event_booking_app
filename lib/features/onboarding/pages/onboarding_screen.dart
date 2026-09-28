@@ -1,3 +1,5 @@
+import 'package:event_booking_app/core/functions/naviagtions.dart';
+import 'package:event_booking_app/features/auth/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/app_images.dart';
@@ -40,10 +42,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
-    } else {}
+    } else {
+      pushReplacement(context, SigninScreen());
+    }
   }
 
-  void skipOnboarding() {}
+  void skipOnboarding() {
+    pushReplacement(context, SigninScreen());
+  }
 
   @override
   void dispose() {
