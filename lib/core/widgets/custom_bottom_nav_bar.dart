@@ -1,6 +1,7 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
+import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -49,15 +50,23 @@ class _MainAppScreenState extends State<MainAppScreen> {
       child: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const EventDetailsScreen(),
+              ),
+            );
+          } else {
+            setState(() {
+              currentIndex = index;
+            });
+          }
         },
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: AppColors.greyColor,
-        items: [
-          const BottomNavigationBarItem(
-            
+        items: const [
+          BottomNavigationBarItem(
             icon: CustomSvgImage(path: AppImages.exploreSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.exploreSvg,
@@ -65,7 +74,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
             ),
             label: 'Explore',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: CustomSvgImage(path: AppImages.eventSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.eventSvg,
@@ -73,7 +82,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
             ),
             label: 'Events',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: CustomSvgImage(path: AppImages.mapSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.mapSvg,
@@ -81,7 +90,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
             ),
             label: 'Map',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: CustomSvgImage(path: AppImages.userSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.userSvg,

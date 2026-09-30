@@ -42,6 +42,3 @@ class CustomTextField extends StatelessWidget {
 }
 
 
-//  list1 , list2
-
-// list3 = [ if(condition)...list1 , list2 ]
