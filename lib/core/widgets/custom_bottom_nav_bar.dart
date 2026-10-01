@@ -1,6 +1,7 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
+import 'package:event_booking_app/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
 
   final List<Widget> screens = [
-    const Scaffold(body: Center(child: Text('Home'))),
+    const HomeScreen(),
     const Scaffold(body: Center(child: Text('Events'))),
     const Scaffold(body: Center(child: Text('Map'))),
     const Scaffold(body: Center(child: Text('Profile'))),

@@ -23,4 +23,5 @@ class AppImages {
   static const String searchSvg = 'assets/icons/search.svg';
   static const String sportSvg = 'assets/icons/sport.svg';
   static const String userSvg = 'assets/icons/user.svg';
+  static const String menuSvg = 'assets/icons/menu.svg';
 }
