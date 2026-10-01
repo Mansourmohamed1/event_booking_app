@@ -12,6 +12,7 @@ class AppImages {
   static const String eventAttendee2 = 'assets/images/event_attendee_2.png';
   static const String eventAttendee3 = 'assets/images/event_attendee_3.png';
   static const String eventOrganizer = 'assets/images/event_organizer.png';
+  static const String filters = 'assets/images/filters.png';
 
   // Icons
   static const String bookmarkSvg = 'assets/icons/bookmark.svg';
@@ -34,4 +35,6 @@ class AppImages {
   static const String eventLocationSvg = 'assets/icons/event_location.svg';
   static const String eventTicketButtonSvg =
       'assets/icons/event_ticket_button.svg';
+  static const String artSVG = "assets/icons/artSVG.svg";
+  static const String locationSVG = "assets/icons/location.svg";
 }

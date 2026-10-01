@@ -3,6 +3,7 @@ import 'package:event_booking_app/core/functions/naviagtions.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
 import 'package:event_booking_app/core/widgets/custom_bottom_nav_bar.dart';
+import 'package:event_booking_app/core/widgets/custom_text_field.dart';
 import 'package:event_booking_app/features/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -33,74 +34,27 @@ class SigninScreen extends StatelessWidget {
               const Gap(24),
               Text('Sign in', style: TextStyles.headline2),
               const Gap(16),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: const Icon(
-                    Icons.email_outlined,
-                    color: AppColors.greyColor,
-                  ),
-                  hintText: 'abc@gmail.com',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.redColor),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.redColor),
-                  ),
+              CustomTextField(
+                prefixIcon: const Icon(
+                  Icons.email_outlined,
+                  color: AppColors.greyColor,
                 ),
+                hintText: 'abc@gmail.com',
               ),
+
               const Gap(16),
-
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: const Icon(
-                    Icons.lock_outline,
-                    color: AppColors.greyColor,
-                  ),
-                  suffixIcon: const Icon(
-                    Icons.visibility_off,
-                    color: AppColors.greyColor,
-                  ),
-                  hintText: 'Your password',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.redColor),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.redColor),
-                  ),
+              CustomTextField(
+                prefixIcon: Icon(
+                  Icons.lock_outline,
+                  color: AppColors.greyColor,
                 ),
+                suffixIcon: const Icon(
+                  Icons.visibility_off,
+                  color: AppColors.greyColor,
+                ),
+                hintText: 'Your password',
               ),
+
               const Gap(16),
 
               Row(
@@ -151,7 +105,7 @@ class SigninScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                        pushReplacement(context, const MainAppScreen());
+                      pushReplacement(context, const MainAppScreen());
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
