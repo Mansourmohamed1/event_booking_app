@@ -13,6 +13,7 @@ class AppImages {
   static const String eventAttendee3 = 'assets/images/event_attendee_3.png';
   static const String eventOrganizer = 'assets/images/event_organizer.png';
   static const String filters = 'assets/images/filters.png';
+  static const String mapView = "assets/images/mapView.png";
 
   // Icons
   static const String bookmarkSvg = 'assets/icons/bookmark.svg';

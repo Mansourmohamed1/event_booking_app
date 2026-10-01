@@ -4,6 +4,8 @@ import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
 import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../features/map/pages/map_creen.dart';
+
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
 
@@ -17,7 +19,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   final List<Widget> screens = [
     const Scaffold(body: Center(child: Text('Home'))),
     const Scaffold(body: Center(child: Text('Events'))),
-    const Scaffold(body: Center(child: Text('Map'))),
+    MapCreen(),
     const Scaffold(body: Center(child: Text('Profile'))),
   ];
 
@@ -67,7 +69,10 @@ class _MainAppScreenState extends State<MainAppScreen> {
         unselectedItemColor: AppColors.greyColor,
         items: const [
           BottomNavigationBarItem(
-            icon: CustomSvgImage(path: AppImages.exploreSvg, color: AppColors.greyColor),
+            icon: CustomSvgImage(
+              path: AppImages.exploreSvg,
+              color: AppColors.greyColor,
+            ),
             activeIcon: CustomSvgImage(
               path: AppImages.exploreSvg,
               color: AppColors.primaryColor,
@@ -75,7 +80,10 @@ class _MainAppScreenState extends State<MainAppScreen> {
             label: 'Explore',
           ),
           BottomNavigationBarItem(
-            icon: CustomSvgImage(path: AppImages.eventSvg, color: AppColors.greyColor),
+            icon: CustomSvgImage(
+              path: AppImages.eventSvg,
+              color: AppColors.greyColor,
+            ),
             activeIcon: CustomSvgImage(
               path: AppImages.eventSvg,
               color: AppColors.primaryColor,
@@ -83,7 +91,10 @@ class _MainAppScreenState extends State<MainAppScreen> {
             label: 'Events',
           ),
           BottomNavigationBarItem(
-            icon: CustomSvgImage(path: AppImages.mapSvg, color: AppColors.greyColor),
+            icon: CustomSvgImage(
+              path: AppImages.mapSvg,
+              color: AppColors.greyColor,
+            ),
             activeIcon: CustomSvgImage(
               path: AppImages.mapSvg,
               color: AppColors.primaryColor,
@@ -91,7 +102,10 @@ class _MainAppScreenState extends State<MainAppScreen> {
             label: 'Map',
           ),
           BottomNavigationBarItem(
-            icon: CustomSvgImage(path: AppImages.userSvg, color: AppColors.greyColor),
+            icon: CustomSvgImage(
+              path: AppImages.userSvg,
+              color: AppColors.greyColor,
+            ),
             activeIcon: CustomSvgImage(
               path: AppImages.userSvg,
               color: AppColors.primaryColor,
