@@ -7,6 +7,13 @@ class AppImages {
   static const String onboarding3 = 'assets/images/onboarding3.png';
   static const String noNotifications = 'assets/images/noNotifications.png';
   static const String upcoming = 'assets/images/upcoming.png';
+  static const String eventConcertHero = 'assets/images/event_concert_hero.png';
+  static const String eventAttendee1 = 'assets/images/event_attendee_1.png';
+  static const String eventAttendee2 = 'assets/images/event_attendee_2.png';
+  static const String eventAttendee3 = 'assets/images/event_attendee_3.png';
+  static const String eventOrganizer = 'assets/images/event_organizer.png';
+  static const String filters = 'assets/images/filters.png';
+  static const String mapView = "assets/images/mapView.png";
 
   // Icons
   static const String bookmarkSvg = 'assets/icons/bookmark.svg';
@@ -23,5 +30,17 @@ class AppImages {
   static const String searchSvg = 'assets/icons/search.svg';
   static const String sportSvg = 'assets/icons/sport.svg';
   static const String userSvg = 'assets/icons/user.svg';
+<<<<<<< HEAD
   static const String menuSvg = 'assets/icons/menu.svg';
 }
+=======
+  static const String eventBookmarkSvg = 'assets/icons/event_bookmark.svg';
+  static const String eventBackSvg = 'assets/icons/event_back.svg';
+  static const String eventCalendarSvg = 'assets/icons/event_calendar.svg';
+  static const String eventLocationSvg = 'assets/icons/event_location.svg';
+  static const String eventTicketButtonSvg =
+      'assets/icons/event_ticket_button.svg';
+  static const String artSVG = "assets/icons/artSVG.svg";
+  static const String locationSVG = "assets/icons/location.svg";
+}
+>>>>>>> f410a1c0f963e102dea410b76796787ca0822e5c

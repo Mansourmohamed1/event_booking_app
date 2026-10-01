@@ -1,6 +1,7 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
+import 'package:event_booking_app/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -28,119 +29,57 @@ class SignupScreen extends StatelessWidget {
             children: [
               Text('Sign up', style: TextStyles.headline2),
               const Gap(20),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: SvgPicture.asset(
-                      AppImages.userSvg,
-                      height: 24,
-                      width: 24,
-                      colorFilter: const ColorFilter.mode(
-                        AppColors.greyColor,
-                        BlendMode.srcIn,
-                      ),
+              CustomTextField(
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: SvgPicture.asset(
+                    AppImages.userSvg,
+                    height: 24,
+                    width: 24,
+                    colorFilter: const ColorFilter.mode(
+                      AppColors.greyColor,
+                      BlendMode.srcIn,
                     ),
                   ),
-                  hintText: 'Full name',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
                 ),
+                hintText: 'Full name',
               ),
-              const Gap(16),
 
-              TextFormField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: const Icon(
-                    Icons.email_outlined,
-                    color: AppColors.greyColor,
-                  ),
-                  hintText: 'abc@gmail.com',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
-                ),
-              ),
               const Gap(16),
-
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: const Icon(
-                    Icons.lock_outline,
-                    color: AppColors.greyColor,
-                  ),
-                  suffixIcon: const Icon(
-                    Icons.visibility_off,
-                    color: AppColors.greyColor,
-                  ),
-                  hintText: 'Your password',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
+              CustomTextField(
+                hintText: 'abc@gmail.com',
+                prefixIcon: Icon(
+                  Icons.email_outlined,
+                  color: AppColors.greyColor,
                 ),
               ),
+
               const Gap(16),
-
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  prefixIcon: const Icon(
-                    Icons.lock_outline,
-                    color: AppColors.greyColor,
-                  ),
-                  suffixIcon: const Icon(
-                    Icons.visibility_off,
-                    color: AppColors.greyColor,
-                  ),
-                  hintText: 'Confirm password',
-                  hintStyle: TextStyles.body.copyWith(
-                    color: AppColors.greyColor,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.borderColor),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: AppColors.greenColor),
-                  ),
+              CustomTextField(
+                hintText: 'Your password',
+                prefixIcon: Icon(
+                  Icons.lock_outline,
+                  color: AppColors.greyColor,
+                ),
+                suffixIcon: Icon(
+                  Icons.visibility_off,
+                  color: AppColors.greyColor,
                 ),
               ),
+
+              const Gap(16),
+              CustomTextField(
+                hintText: 'Confirm password',
+                prefixIcon: Icon(
+                  Icons.lock_outline,
+                  color: AppColors.greyColor,
+                ),
+                suffixIcon: Icon(
+                  Icons.visibility_off,
+                  color: AppColors.greyColor,
+                ),
+              ),
+
               const Gap(32),
 
               Center(
