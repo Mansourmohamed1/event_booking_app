@@ -1,4 +1,6 @@
+import 'package:event_booking_app/core/functions/naviagtions.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
+import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
 import 'package:event_booking_app/features/home/widget/build_drawer.dart';
 import 'package:event_booking_app/features/home/widget/build_header.dart';
 import 'package:event_booking_app/features/home/widget/build_invite.dart';
@@ -28,21 +30,19 @@ class _HomeScreenState extends State<HomeScreen> {
       mainScreen: _buildHomeScreen(),
 
       // عرض الـ Drawer
-      slideWidth: MediaQuery.of(context).size.width * 0.72,
+      slideWidth: MediaQuery.of(context).size.width * 0.75,
 
       // تصغير الـ Home
-      mainScreenScale: 0.82,
+      mainScreenScale: 0.2,
 
       // الحواف الدائرية
-      borderRadius: 25,
+      borderRadius: 50,
 
       // بدون دوران
       angle: 0,
 
       // Shadow
-      showShadow: true,
-
-      drawerShadowsBackgroundColor: Colors.grey.shade300,
+      showShadow: false,
 
       // الضغط على الـ Home يقفل الـ Drawer
       mainScreenTapClose: true,
@@ -59,10 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(0),
-        child: AppBar(
-          backgroundColor: AppColors.blueColor,
-          elevation: 0,
-        ),
+        child: AppBar(backgroundColor: AppColors.blueColor, elevation: 0),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -74,11 +71,18 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
 
-            BuildUpcoming(headerText: 'Upcoming Events', onTap: () {}),
+            BuildUpcoming(
+              headerText: 'Upcoming Events',
+              onTap: () {
+                pushTo(context, EventDetailsScreen());
+              },
+            ),
 
             BuildInvite(onPressed: () {}),
 
-            BuildUpcoming(headerText: 'Nearby You', onTap: () {}),
+            BuildUpcoming(headerText: 'Nearby You', onTap: () {
+              pushTo(context, EventDetailsScreen());
+            }),
           ],
         ),
       ),

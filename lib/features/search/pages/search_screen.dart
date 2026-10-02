@@ -1,14 +1,7 @@
-import 'package:event_booking_app/core/constants/app_images.dart';
-import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
-import 'package:event_booking_app/core/widgets/custom_text_field.dart';
 import 'package:event_booking_app/features/events/widgets/events_list.dart';
 import 'package:event_booking_app/features/search/widgets/filterBottomSheetContent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
-
-import '../../events/data/events_data.dart';
 import '../widgets/search_text_field.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -76,13 +69,8 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Row(
-          children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-            Gap(5),
-            Text("Search", style: TextStyles.headline2),
-          ],
-        ),
+        title: 
+            Text("Search", style: TextStyles.headline2)
       ),
       body: Column(
         children: [

@@ -1,3 +1,9 @@
+import 'package:event_booking_app/core/constants/app_images.dart';
+import 'package:event_booking_app/core/functions/naviagtions.dart';
+import 'package:event_booking_app/core/styles/app_colors.dart';
+import 'package:event_booking_app/core/styles/text_styles.dart';
+import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
+import 'package:event_booking_app/features/auth/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 class BuildDrawer extends StatelessWidget {
@@ -68,7 +74,9 @@ class BuildDrawer extends StatelessWidget {
                     _buildDrawerItem(
                       icon: Icons.logout_rounded,
                       title: 'Sign Out',
-                      onTap: () {},
+                      onTap: () {
+                        pushReplacement(context, SigninScreen());
+                      },
                     ),
                   ],
                 ),
@@ -99,11 +107,11 @@ class BuildDrawer extends StatelessWidget {
           SizedBox(width: 16),
 
           Text(
-            'Ashfak\nSayem',
+            'Mansour',
             style: TextStyle(
               fontSize: 21,
               fontWeight: FontWeight.w700,
-              color: Colors.black,
+              color: AppColors.blackColor,
               height: 1.25,
             ),
           ),
@@ -131,7 +139,7 @@ class BuildDrawer extends StatelessWidget {
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    Icon(icon, size: 26, color: const Color(0xffA0A0A0)),
+                    Icon(icon, size: 26, color:AppColors.greyColor),
 
                     if (badge != null)
                       Positioned(
@@ -163,10 +171,9 @@ class BuildDrawer extends StatelessWidget {
 
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.black,
+                style: TextStyles.body.copyWith(
+                  fontSize: 17,
+                  color: AppColors.blackColor,
                 ),
               ),
             ],
@@ -185,7 +192,7 @@ class BuildDrawer extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xffE2FBFC),
+            backgroundColor: AppColors.lightblueColor,
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
@@ -194,18 +201,14 @@ class BuildDrawer extends StatelessWidget {
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.workspace_premium_outlined,
-                color: Color(0xff00B9C6),
-                size: 27,
-              ),
+              CustomSvgImage(path: AppImages.crownSvg, color: AppColors.secondaryColor),
 
               SizedBox(width: 10),
 
               Text(
                 'Upgrade Pro',
                 style: TextStyle(
-                  color: Color(0xff00B9C6),
+                  color: AppColors.secondaryColor,
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),

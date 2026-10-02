@@ -1,13 +1,10 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
-import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
-import 'package:event_booking_app/features/events/pages/events_list_screen.dart';
 import 'package:event_booking_app/features/events/pages/no_upcoming_event_screen.dart';
 import 'package:event_booking_app/features/home/home_screen.dart';
+import 'package:event_booking_app/features/map/pages/map_creen.dart';
 import 'package:flutter/material.dart';
-
-import '../../features/map/pages/map_creen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -21,7 +18,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
 
   final List<Widget> screens = [
     HomeScreen(),
-    const Scaffold(body: Center(child: Text('Events'))),
+    NoUpcomingEventScreen(),
     MapCreen(),
     const Scaffold(body: Center(child: Text('Profile'))),
   ];
@@ -55,60 +52,40 @@ class _MainAppScreenState extends State<MainAppScreen> {
       child: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {
-          if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const NoUpcomingEventScreen(),
-              ),
-            );
-          } else {
-            setState(() {
-              currentIndex = index;
-            });
-          }
+          setState(() {
+            currentIndex = index;
+          });
         },
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: AppColors.greyColor,
-        items: const [
-          BottomNavigationBarItem(
-            icon: CustomSvgImage(
-              path: AppImages.exploreSvg,
-              color: AppColors.greyColor,
-            ),
+        items: [
+          const BottomNavigationBarItem(
+            
+            icon: CustomSvgImage(path: AppImages.exploreSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.exploreSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Explore',
           ),
-          BottomNavigationBarItem(
-            icon: CustomSvgImage(
-              path: AppImages.eventSvg,
-              color: AppColors.greyColor,
-            ),
+          const BottomNavigationBarItem(
+            icon: CustomSvgImage(path: AppImages.eventSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.eventSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Events',
           ),
-          BottomNavigationBarItem(
-            icon: CustomSvgImage(
-              path: AppImages.mapSvg,
-              color: AppColors.greyColor,
-            ),
+          const BottomNavigationBarItem(
+            icon: CustomSvgImage(path: AppImages.mapSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.mapSvg,
               color: AppColors.primaryColor,
             ),
             label: 'Map',
           ),
-          BottomNavigationBarItem(
-            icon: CustomSvgImage(
-              path: AppImages.userSvg,
-              color: AppColors.greyColor,
-            ),
+          const BottomNavigationBarItem(
+            icon: CustomSvgImage(path: AppImages.userSvg, color: AppColors.greyColor),
             activeIcon: CustomSvgImage(
               path: AppImages.userSvg,
               color: AppColors.primaryColor,

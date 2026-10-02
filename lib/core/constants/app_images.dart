@@ -32,6 +32,7 @@ class AppImages {
   static const String musicSvg = 'assets/icons/music.svg';
   static const String searchSvg = 'assets/icons/search.svg';
   static const String sportSvg = 'assets/icons/sport.svg';
+  static const String crownSvg = 'assets/icons/crown.svg';
   static const String userSvg = 'assets/icons/user.svg';
   static const String eventBookmarkSvg = 'assets/icons/event_bookmark.svg';
   static const String eventBackSvg = 'assets/icons/event_back.svg';

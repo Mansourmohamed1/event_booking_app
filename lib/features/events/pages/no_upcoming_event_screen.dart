@@ -1,3 +1,5 @@
+import 'package:event_booking_app/core/functions/naviagtions.dart';
+import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'events_list_screen.dart';
 
@@ -10,7 +12,6 @@ class NoUpcomingEventScreen extends StatefulWidget {
 
 class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
   int _selectedTab = 0;
-  int _bottomNavIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +20,7 @@ class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        centerTitle: false,
-        titleSpacing: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.maybePop(context),
-        ),
+        centerTitle: true,
         title: const Text(
           'Events',
           style: TextStyle(
@@ -67,7 +63,7 @@ class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
                           boxShadow: _selectedTab == 0
                               ? [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
+                                    color: AppColors.blackColor.withValues(alpha: 0.05),
                                     blurRadius: 8,
                                     offset: const Offset(0, 2),
                                   ),
@@ -101,7 +97,7 @@ class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
                           boxShadow: _selectedTab == 1
                               ? [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
+                                    color: AppColors.blackColor.withValues(alpha: 0.05),
                                     blurRadius: 8,
                                     offset: const Offset(0, 2),
                                   ),
@@ -175,12 +171,7 @@ class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
                       height: 58,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const EventsListScreen(),
-                            ),
-                          );
+                          pushTo(context, EventsListScreen());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF5669FF),
@@ -221,57 +212,6 @@ class _NoUpcomingEventScreenState extends State<NoUpcomingEventScreen> {
             ),
           ],
         ),
-      ),
-
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xFF5669FF),
-        elevation: 4,
-        child: const Icon(Icons.add, size: 28, color: Colors.white),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        notchMargin: 8,
-        color: Colors.white,
-        child: SizedBox(
-          height: 60,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _buildNavItem(0, Icons.explore_outlined, 'Explore'),
-              _buildNavItem(1, Icons.calendar_today_rounded, 'Events'),
-              const SizedBox(width: 40),
-              _buildNavItem(2, Icons.location_on_outlined, 'Map'),
-              _buildNavItem(3, Icons.person_outline, 'Profile'),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildNavItem(int index, IconData icon, String label) {
-    final isSelected = _bottomNavIndex == index;
-    final color = isSelected ? const Color(0xFF5669FF) : Colors.grey;
-
-    return InkWell(
-      onTap: () => setState(() => _bottomNavIndex = index),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: color, size: 24),
-          const SizedBox(height: 2),
-          Text(
-            label,
-            style: TextStyle(
-              color: color,
-              fontSize: 11,
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-            ),
-          ),
-        ],
       ),
     );
   }
