@@ -2,6 +2,8 @@ import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
 import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
+import 'package:event_booking_app/features/events/pages/events_list_screen.dart';
+import 'package:event_booking_app/features/events/pages/no_upcoming_event_screen.dart';
 import 'package:event_booking_app/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +59,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const EventDetailsScreen(),
+                builder: (context) => const NoUpcomingEventScreen(),
               ),
             );
           } else {
