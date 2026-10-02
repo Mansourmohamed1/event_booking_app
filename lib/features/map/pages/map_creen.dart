@@ -1,16 +1,45 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
+import 'package:event_booking_app/core/widgets/custom_itmes.dart';
 import 'package:event_booking_app/features/map/widgets/event_container.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-import '../../../core/widgets/custom_category_chip.dart';
+
 
 class MapCreen extends StatelessWidget {
-  const MapCreen({super.key});
-
+  MapCreen({super.key});
+  final List<Map<String, dynamic>> categories = [
+    {
+      'title': 'Sports',
+      'svgIconPath': AppImages.sportSvg,
+      'backgroundColor': AppColors.whiteColor,
+      'iconColor': AppColors.redColor,
+      'textColor': AppColors.greyColor,
+    },
+    {
+      'title': 'Music',
+      'svgIconPath': AppImages.musicSvg,
+      'backgroundColor': AppColors.whiteColor,
+      'iconColor': AppColors.primaryColor,
+      'textColor': AppColors.greyColor,
+    },
+    {
+      'title': 'Food',
+      'svgIconPath': AppImages.foodSvg,
+      'backgroundColor': AppColors.whiteColor,
+      'iconColor': AppColors.greenColor,
+      'textColor': AppColors.greyColor,
+    },
+    {
+      'title': 'Art',
+      'svgIconPath': AppImages.artSVG,
+      'backgroundColor': AppColors.whiteColor,
+      'iconColor': AppColors.blueColor,
+      'textColor': AppColors.greyColor,
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +99,6 @@ class MapCreen extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Gap(10),
                       Container(
                         height: 50,
@@ -94,44 +122,7 @@ class MapCreen extends StatelessWidget {
                     ],
                   ),
                   Gap(20),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        CustomCategoryChip(
-                          title: "Sports",
-                          svgIconPath: AppImages.sportSvg,
-                          backgroundColor: AppColors.whiteColor,
-                          iconColor: AppColors.redColor,
-                          textColor: AppColors.greyColor,
-                        ),
-                        Gap(10),
-                        CustomCategoryChip(
-                          title: "Music",
-                          svgIconPath: AppImages.musicSvg,
-                          backgroundColor: AppColors.whiteColor,
-                          iconColor: AppColors.primaryColor,
-                          textColor: AppColors.greyColor,
-                        ),
-                        Gap(10),
-                        CustomCategoryChip(
-                          title: "Food",
-                          svgIconPath: AppImages.foodSvg,
-                          backgroundColor: AppColors.whiteColor,
-                          iconColor: AppColors.greenColor,
-                          textColor: AppColors.greyColor,
-                        ),
-                        Gap(10),
-                        CustomCategoryChip(
-                          title: "Art",
-                          svgIconPath: AppImages.artSVG,
-                          backgroundColor: AppColors.whiteColor,
-                          iconColor: AppColors.blueColor,
-                          textColor: AppColors.greyColor,
-                        ),
-                      ],
-                    ),
-                  ),
+                  CustomItmes(categories:categories,),
                   Spacer(),
                   EventContainer(),
                 ],
@@ -143,3 +134,5 @@ class MapCreen extends StatelessWidget {
     );
   }
 }
+
+

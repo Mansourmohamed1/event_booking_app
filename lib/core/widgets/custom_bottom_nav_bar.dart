@@ -1,11 +1,8 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
-<<<<<<< HEAD
-import 'package:event_booking_app/features/home/home_screen.dart';
-=======
 import 'package:event_booking_app/features/event_details/pages/event_details_screen.dart';
->>>>>>> f410a1c0f963e102dea410b76796787ca0822e5c
+import 'package:event_booking_app/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/map/pages/map_creen.dart';
@@ -21,7 +18,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
 
   final List<Widget> screens = [
-    const HomeScreen(),
+    HomeScreen(),
     const Scaffold(body: Center(child: Text('Events'))),
     MapCreen(),
     const Scaffold(body: Center(child: Text('Profile'))),

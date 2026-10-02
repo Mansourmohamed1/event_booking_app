@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
     required this.prefixIcon,
     this.validator,
     this.suffixIcon,
+    this.color,
   });
 
   final String? title;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final Widget prefixIcon;
   final Icon? suffixIcon;
   final String? Function(String?)? validator;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class CustomTextField extends StatelessWidget {
           obscureText: true,
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.white,
+            fillColor: color ?? AppColors.whiteColor,
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             hintText: hintText,

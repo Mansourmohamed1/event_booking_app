@@ -5,6 +5,8 @@ void pushTo(BuildContext context, Widget newScreen) {
 }
 
 void pushReplacement(BuildContext context, Widget newScreen) {
-  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => newScreen));
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => newScreen),
+  );
 }
-

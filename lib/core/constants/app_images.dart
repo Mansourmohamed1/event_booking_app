@@ -30,10 +30,6 @@ class AppImages {
   static const String searchSvg = 'assets/icons/search.svg';
   static const String sportSvg = 'assets/icons/sport.svg';
   static const String userSvg = 'assets/icons/user.svg';
-<<<<<<< HEAD
-  static const String menuSvg = 'assets/icons/menu.svg';
-}
-=======
   static const String eventBookmarkSvg = 'assets/icons/event_bookmark.svg';
   static const String eventBackSvg = 'assets/icons/event_back.svg';
   static const String eventCalendarSvg = 'assets/icons/event_calendar.svg';
@@ -43,4 +39,3 @@ class AppImages {
   static const String artSVG = "assets/icons/artSVG.svg";
   static const String locationSVG = "assets/icons/location.svg";
 }
->>>>>>> f410a1c0f963e102dea410b76796787ca0822e5c

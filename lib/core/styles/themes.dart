@@ -3,7 +3,6 @@ import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-
 class AppThemes {
   static ThemeData get lightTheme => ThemeData(
     fontFamily: AppFonts.poppins,
