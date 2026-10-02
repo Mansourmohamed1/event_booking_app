@@ -6,8 +6,6 @@ import 'package:event_booking_app/features/map/widgets/event_container.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-
-
 class MapCreen extends StatelessWidget {
   MapCreen({super.key});
   final List<Map<String, dynamic>> categories = [
@@ -122,7 +120,7 @@ class MapCreen extends StatelessWidget {
                     ],
                   ),
                   Gap(20),
-                  CustomItmes(categories:categories,),
+                  CustomItmes(categories: categories),
                   Spacer(),
                   EventContainer(),
                 ],
@@ -134,5 +132,3 @@ class MapCreen extends StatelessWidget {
     );
   }
 }
-
-

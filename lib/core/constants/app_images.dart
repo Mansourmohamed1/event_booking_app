@@ -11,9 +11,11 @@ class AppImages {
   static const String eventAttendee1 = 'assets/images/event_attendee_1.png';
   static const String eventAttendee2 = 'assets/images/event_attendee_2.png';
   static const String eventAttendee3 = 'assets/images/event_attendee_3.png';
+  static const String eventAttendee = 'assets/images/event_attendee.png';
   static const String eventOrganizer = 'assets/images/event_organizer.png';
   static const String filters = 'assets/images/filters.png';
   static const String mapView = "assets/images/mapView.png";
+  static const String invite = "assets/images/invite.png";
 
   // Icons
   static const String bookmarkSvg = 'assets/icons/bookmark.svg';
@@ -25,6 +27,7 @@ class AppImages {
   static const String foodSvg = 'assets/icons/food.svg';
   static const String googleSvg = 'assets/icons/google.svg';
   static const String mapSvg = 'assets/icons/map.svg';
+  static const String menuSvg = 'assets/icons/menu.svg';
   static const String massageSvg = 'assets/icons/massage.svg';
   static const String musicSvg = 'assets/icons/music.svg';
   static const String searchSvg = 'assets/icons/search.svg';

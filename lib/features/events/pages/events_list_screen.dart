@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../data/events_data.dart';
 import '../widgets/events_list.dart';
 
 class EventsListScreen extends StatelessWidget {
