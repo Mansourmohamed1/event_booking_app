@@ -16,6 +16,7 @@ class AppImages {
   static const String filters = 'assets/images/filters.png';
   static const String mapView = "assets/images/mapView.png";
   static const String invite = "assets/images/invite.png";
+  static const String eventAttendee4 = 'assets/images/attendee4.png';
 
   // Icons
   static const String bookmarkSvg = 'assets/icons/bookmark.svg';

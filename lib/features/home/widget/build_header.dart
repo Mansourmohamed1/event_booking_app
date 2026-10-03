@@ -5,6 +5,7 @@ import 'package:event_booking_app/core/styles/app_colors.dart';
 import 'package:event_booking_app/core/styles/text_styles.dart';
 import 'package:event_booking_app/core/widgets/custom_itmes.dart';
 import 'package:event_booking_app/core/widgets/custom_svg_image.dart';
+import 'package:event_booking_app/features/notifications/pages/notification_screen1.dart';
 import 'package:event_booking_app/features/search/pages/search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -107,10 +108,14 @@ class BuildHeader extends StatelessWidget {
                           color: AppColors.whiteColor.withValues(alpha: 0.12),
                           shape: BoxShape.circle,
                         ),
-                        child: const Icon(
-                          Icons.notifications_none_rounded,
-                          color: AppColors.whiteColor,
-                          size: 24,
+                        child: IconButton(
+                          onPressed: () {
+                            pushTo(context, NotificationScreen1());
+                          },
+                          icon: Icon(
+                            Icons.notifications_none_rounded,
+                            size: 24,
+                          ),
                         ),
                       ),
                     ],

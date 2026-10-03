@@ -1,5 +1,6 @@
 import 'package:event_booking_app/core/constants/app_images.dart';
 import 'package:event_booking_app/core/widgets/main_button.dart';
+import 'package:event_booking_app/core/widgets/main_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -188,29 +189,7 @@ class _FilterBottomSheetContentState extends State<FilterBottomSheetContent> {
 
             Row(
               children: [
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 16,
-                        horizontal: 24,
-                      ),
-
-                      side: BorderSide(
-                        color: AppColors.borderColor,
-                        width: 1.5,
-                      ),
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-
-                      backgroundColor: Colors.white,
-                    ),
-                    child: Text("RESET", style: TextStyles.body),
-                  ),
-                ),
+                Expanded(child: MainButton2(text: "Reset")),
                 const SizedBox(width: 16),
                 Expanded(
                   child: MainButton(text: "Apply", onPressed: () {}),
